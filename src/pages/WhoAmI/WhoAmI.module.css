@@ -1,0 +1,136 @@
+.Container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grey);
+    height: calc(100vh - 12rem);
+}
+
+.Container h2 {
+    margin-bottom: 1.85rem;
+}
+
+.Container p {
+    margin: .5rem;
+    font-size: .85rem;
+    text-align: center;
+}
+
+.Container .MyImage {
+    margin: 1rem;
+    width: 8rem;
+    margin-bottom: 2rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.Container .MyImage:hover {
+    filter: brightness(1.2);
+}
+
+
+.Container .BrandContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .85rem;
+    cursor: pointer;
+    margin-right: .75rem;
+    transition: .3s;
+}
+
+.Container .BrandContainer:hover {
+    filter: brightness(1.3);
+    color: #222;
+}
+
+.Container .BrandContainer:hover:nth-child(2) img {
+    opacity: .7;
+}
+
+.Container .BrandContainer:last-child {
+    margin-right: 0;
+}
+
+.Container .BrandIcon {
+    width: 2rem;
+    padding: .35rem;
+}
+
+.Container .ContactContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: fit-content;
+    margin: 3rem auto;
+}
+
+.Container .Email {
+    font-size: 1rem;
+    margin: 0;
+    position: absolute;
+    bottom: 11rem;
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.Container .Email:hover + .Tooltip {
+    opacity: 1;
+}
+
+.Container .Tooltip {
+    font-size: .75rem;
+    margin: 0;
+    position: absolute;
+    bottom: 9.1rem;
+    background: var(--dark-grey);
+    color: var(--white-ish);
+    padding: .2rem .5rem;
+    border-radius: .2rem;
+    opacity: 0;
+    transition: .4s;
+}
+
+.Container .Tooltip::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--dark-grey) transparent;
+}
+
+@media only screen and (max-width: 510px) {
+    .Container {
+        padding: .5rem;
+        justify-content: flex-start;
+        height: calc(100vh - 9rem);
+    }
+
+    .Container .ContactContainer {
+        flex-flow: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .Container h2 {
+        margin: .65rem;
+    }
+    
+    .Container .MyImage {
+        margin: .65rem;
+    }
+
+    .Container .ContactContainer {
+        margin: 1rem auto;
+    }
+
+}
+

@@ -1,0 +1,46 @@
+.LogoContainer {
+    cursor: pointer;
+    position: fixed;
+    left: 0;
+    bottom: 1.5rem;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    transition: .4s;;
+}
+
+.LogoContainer:hover {
+    filter: brightness(1.23);
+    transform: scale(1.05);
+}
+
+.LogoIcon {
+    height: 3rem;
+    filter: invert(54%) sepia(82%) saturate(691%) hue-rotate(359deg) brightness(100%) contrast(106%);
+}
+
+.FooterName {
+    font-size: .8rem;
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+@media only screen and (max-width: 510px) {
+    .LogoContainer {
+        bottom: .5rem;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    .FooterName {
+        display: none;
+    }
+
+    .LogoContainer {
+        bottom: 0rem;
+    }
+
+    .LogoIcon {
+        height: 2.5rem;
+    }
+}

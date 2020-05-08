@@ -1,0 +1,14 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background: var(--dark-grey);
+    box-shadow: 5px 8px 10px #85a2af45;
+    height: 18px;
+}
+
+@media only screen and (max-width: 510px) {
+    .Header {
+        padding: 1.25rem .5rem;
+    }
+}

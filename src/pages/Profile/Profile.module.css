@@ -1,0 +1,192 @@
+.Loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ProfileContainer {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--dark-grey);
+    height: calc(100vh - 12rem);
+    position: relative;
+}
+
+.ProfileContainer h2 {
+    margin-bottom: 2.5rem;
+}
+
+.ProfileContainer form {
+    box-shadow: 0 0 10px 0 var(--white-ish);
+    border-radius: .5rem;
+}
+
+.ProfileContainer .FormContainer {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.ProfileContainer .FormContainer .SectionTitle {
+    margin-top: .5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.ProfileContainer .FormContainer .FormLeft, .FormRight {
+    width: 50%;
+}
+
+.ProfileContainer .FormContainer .FormLeft {
+    padding-right: 1rem;
+}
+
+.ProfileContainer .FormContainer .FormRight {
+    padding-left: 1rem;
+}
+
+.FormContainer label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 12px;
+    padding: 0 0.3rem;
+    width: 98%;
+}
+
+.FormContainer label span {
+	font-weight: 500;
+}
+
+.FormContainer label span.error {
+	color: var(--error-color);;
+}
+
+.FormContainer input {
+    font-size: 13px;
+    color: var(--dark-grey);
+    height: 28px;
+    width: calc(100% - 14px);
+    border-radius: var(--border-radius);
+    padding: 0;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(216, 216, 216, 0.288);
+    outline: none;
+    transition: .4s;
+}
+
+.FormContainer input:focus {
+	box-shadow: 0 0 5px var(--white-ish);
+}
+
+.FormContainer input.error {
+    border: 1px solid var(--error-color);
+}
+
+.FormContainer .verification {
+	display: none;
+    color: #008ecc;
+    margin-left: -25px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.FormContainer .verification.valid {
+	display: inline-flex;
+}
+
+.FormElem .BtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.FormElem .BtnContainer .Btn {
+	padding: 8px 0;
+	width: 15%;
+	border-radius: var(--border-radius);
+    color: var(--dark-grey);
+    border: 0;
+    background: var(--white-ish);
+    outline: none;
+    transition: .3s;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormElem .BtnContainer .Btn:hover {
+    opacity: .92;
+}
+
+.FormElem .BtnContainer .Btn.valid {
+	background: var(--enabled-color);
+	font-weight: 500;
+    color: #fff;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.FormElem .BtnContainer .Btn.valid:hover {
+    background: var(--error-color);
+}
+
+@media only screen and (max-width: 510px) {
+    .ProfileContainer {
+        padding: 0;
+    }
+
+    .ProfileContainer h2 {
+        margin: .8rem 0;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .ProfileContainer .FormContainer {
+        flex-direction: column;
+        padding: .3rem;
+        width: 90vw;
+        overflow-y: scroll;
+        height: 64.5vh;
+    }
+
+    .ProfileContainer .FormContainer .FormLeft, .FormRight {
+        width: 100%;
+    }
+
+    .ProfileContainer .FormContainer .FormRight {
+        padding-left: 0;
+    }
+
+    .ProfileContainer .FormContainer .FormLeft {
+        padding-right: 0;
+    }
+
+    .FormContainer input {
+        font-size: 16px;
+    }
+
+    .FormElem .BtnContainer {
+        margin: 0;
+        margin-top: .75rem;
+    }
+
+    .FormElem .BtnContainer .Btn {
+        width: 100%;
+    }
+
+    .ProfileContainer form {
+        border: none;
+    }
+}
+
+

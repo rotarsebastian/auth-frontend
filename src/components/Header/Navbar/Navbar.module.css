@@ -1,0 +1,38 @@
+.Navbar {
+    display: flex;
+    margin-right: 3rem;
+}
+
+.Navbar div {
+    padding: 0 .3rem;
+}
+
+.Navbar div a {
+    color: var(--white-ish);
+    text-decoration: none;
+    transition: filter .3s;
+}
+
+.Navbar div a:not(.active):hover {
+    filter: brightness(1.5);
+}
+
+.Navbar div a.active {
+    color: var(--error-color);
+}
+
+@media only screen and (max-width: 510px) {
+    .Navbar {
+        margin-right: 0;
+    }
+
+    .Navbar div {
+        font-size: 15px;
+        padding: 0 .7rem;
+    }
+
+    .Navbar div:nth-child(1) {
+        display: none;
+    }
+}
+

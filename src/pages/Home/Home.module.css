@@ -1,0 +1,58 @@
+.HomeContainer {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-grey);
+    height: calc(100vh - 12rem);
+    position: relative;
+}
+
+.HomeContainer .CreateProject {
+    position: absolute;
+    right: .8rem;
+    top: .8rem;
+    background: var(--dark-grey);
+    color: var(--white-ish);
+    padding: .5rem;
+    border-radius: .2rem;
+    transition: .4s;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.HomeContainer .CreateProject:hover {
+    transform: scale(1.05) translateX(-5px);
+}
+
+.HomeContainer .CreateProject::after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    top: 10px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--dark-grey);
+}
+
+.HomeContainer .Code {
+    width: 30rem;
+    filter: invert(92%) sepia(7%) saturate(508%) hue-rotate(211deg) brightness(104%) contrast(83%);
+    transition: .4s;
+}
+
+.HomeContainer .Code:hover {
+    transform: scale(1.01);
+    filter: invert(92%) sepia(7%) saturate(1508%) hue-rotate(211deg) brightness(104%) contrast(83%);
+}
+
+@media only screen and (max-width: 510px) {
+    .HomeContainer {
+        height: calc(100vh - 10rem);
+    }
+
+    .HomeContainer .Code {
+        width: 17rem;
+    }
+}
